@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           Claude Logo Replacer
-// @name:ja        Claudeのロゴを置き換える
+// @name:ja        Claude Logo Replacer
 // @namespace      http://tampermonkey.net/
 // @version        1.0.2
 // @author         hakhatz2486
