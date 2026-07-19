@@ -6,8 +6,10 @@
 // @description    Replace the default Claude.ai logo and favicon with Clawd, the character of Claude Code.
 // @description:ja Claude.aiのデフォルトのロゴとファビコンを、Claude CodeのキャラクターであるClawdに置き換えます。
 // @author         hakhatz2486
-// @homepageURL    https://github.com/hakhatz2486/claude-logo-replacer
+// @homepageURL    https://greasyfork.org/ja/scripts/587693-claude-logo-replacer
 // @supportURL     https://github.com/hakhatz2486/claude-logo-replacer/issues
+// @downloadURL    https://update.greasyfork.org/scripts/587693/claude-logo-replacer.user.js
+// @updateURL      https://update.greasyfork.org/scripts/587693/claude-logo-replacer.meta.js
 // @license        MIT
 // @icon           https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/claudecode-color.png
 // @match          https://claude.ai/*
