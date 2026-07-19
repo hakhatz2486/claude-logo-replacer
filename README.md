@@ -33,4 +33,4 @@ See [CHANGELOG.md](https://github.com/hakhatz2486/claude-logo-replacer/blob/main
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License](https://github.com/hakhatz2486/claude-logo-replacer/blob/main/LICENSE)

@@ -33,4 +33,4 @@ Claude.aiのデフォルトのロゴとファビコンを、Claude Codeのキャ
 
 ## ライセンス
 
-[MIT License](LICENSE)
+[MIT License](https://github.com/hakhatz2486/claude-logo-replacer/blob/main/LICENSE)
