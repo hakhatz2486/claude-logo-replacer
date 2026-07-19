@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Claude Logo Replacer
 // @namespace    http://tampermonkey.net/
-// @version      2026-07-19
+// @version      1.0.0
 // @description  Claudeのロゴを指定されたSVGに置き換えます。
 // @match        https://claude.ai/*
 // @grant        none
