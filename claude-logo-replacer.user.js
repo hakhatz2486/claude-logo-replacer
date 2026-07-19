@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name           Claude Logo Replacer
 // @name:ja        Claude Logo Replacer
-// @namespace      http://tampermonkey.net/
-// @version        1.0.2
+// @namespace      https://github.com/hakhatz2486/claude-logo-replacer
+// @version        1.0.0
+// @description    Replace the default Claude.ai logo and favicon with Clawd, the character of Claude Code.
+// @description:ja Claude.aiのデフォルトのロゴとファビコンを、Claude CodeのキャラクターであるClawdに置き換えます。
 // @author         hakhatz2486
-// @description    This userscript replaces Claude.ai's default logo and favicon with Clawd, the character of Claude Code.
-// @description:ja ClaudeのロゴとファビコンをClawd(Claude Codeのキャラクター)に置き換えるユーザースクリプトです。
 // @homepageURL    https://github.com/hakhatz2486/claude-logo-replacer
 // @supportURL     https://github.com/hakhatz2486/claude-logo-replacer/issues
 // @license        MIT
@@ -56,16 +56,29 @@
         }
 
         faviconLinks.forEach((faviconLink) => {
+            faviconLink.type = "image/svg+xml";
+            faviconLink.removeAttribute("sizes");
+
             if (faviconLink.href !== faviconHref) {
                 faviconLink.href = faviconHref;
             }
         });
     }
 
-    const observer = new MutationObserver(() => {
-        replaceLogo();
-        replaceFavicon();
-    });
+    let replacementScheduled = false;
+
+    function scheduleReplacement() {
+        if (replacementScheduled) return;
+        replacementScheduled = true;
+
+        requestAnimationFrame(() => {
+            replacementScheduled = false;
+            replaceLogo();
+            replaceFavicon();
+        });
+    }
+
+    const observer = new MutationObserver(scheduleReplacement);
 
     observer.observe(document.documentElement, {
         attributes: true,
