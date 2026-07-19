@@ -1,11 +1,18 @@
 // ==UserScript==
-// @name         Claude Logo Replacer
-// @namespace    http://tampermonkey.net/
-// @version      1.0.0
-// @description  Claudeのロゴを指定されたSVGに置き換えます。
-// @match        https://claude.ai/*
-// @grant        none
-// @run-at       document-end
+// @name           Claude Logo Replacer
+// @name:ja        Claudeのロゴを置き換える
+// @namespace      http://tampermonkey.net/
+// @version        1.0.1
+// @author         hakhatz2486
+// @description    This userscript replaces Claude.ai's default logo with Clawd, the character of Claude Code.
+// @description:ja ClaudeのロゴをClawd(Claude Codeのキャラクター)に置き換えるユーザースクリプトです。
+// @homepageURL    https://github.com/hakhatz2486/claude-logo-replacer
+// @supportURL     https://github.com/hakhatz2486/claude-logo-replacer/issues
+// @license        MIT
+// @icon           https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/claudecode-color.png
+// @match          https://claude.ai/*
+// @grant          none
+// @run-at         document-end
 // ==/UserScript==
 
 (function () {
