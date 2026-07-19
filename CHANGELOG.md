@@ -1,13 +1,14 @@
-1.0.2: Add favicon replacement
+# Changelog
 
-1.0.1: Update metadata block
+All notable changes to this project are documented in this file.
 
-1.0.0: Initial release
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/).
 
----
+## 1.0.0 - 2026-07-19
 
-1.0.2: ファビコンの置換機能を追加
+### Added
 
-1.0.1: メタデータをブロックを更新
-
-1.0.0: 初期リリース
+- Replace the default Claude.ai logo with Clawd
+- Replace the browser favicon with Clawd
+- Support dynamic logo and favicon replacement after page rendering
