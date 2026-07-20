@@ -5,6 +5,13 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## 1.0.1 - 2026-07-20
+
+### Fixed
+
+- Replace all concurrently rendered Claude logos within the same frame
+- Preserve React-managed SVG elements to prevent duplicate logos during rerendering
+
 ## 1.0.0 - 2026-07-19
 
 ### Added

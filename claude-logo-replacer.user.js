@@ -2,7 +2,7 @@
 // @name           Claude Logo Replacer
 // @name:ja        Claude Logo Replacer
 // @namespace      https://github.com/hakhatz2486/claude-logo-replacer
-// @version        1.0.0
+// @version        1.0.1
 // @description    Replace the default Claude.ai logo and favicon with Clawd, the character of Claude Code.
 // @description:ja Claude.aiのデフォルトのロゴとファビコンを、Claude CodeのキャラクターであるClawdに置き換えます。
 // @author         hakhatz2486
@@ -25,26 +25,29 @@
         '<svg height="1em" style="flex:none;line-height:1" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><title>Claude Code</title><path clip-rule="evenodd" d="M20.998 10.949H24v3.102h-3v3.028h-1.487V20H18v-2.921h-1.487V20H15v-2.921H9V20H7.488v-2.921H6V20H4.487v-2.921H3V14.05H0V10.95h3V5h17.998v5.949zM6 10.949h1.488V8.102H6v2.847zm10.51 0H18V8.102h-1.49v2.847z" fill="#D97757" fill-rule="evenodd"></path></svg>';
 
     const faviconHref = `data:image/svg+xml,${encodeURIComponent(newLogoSvg)}`;
+    const logoTemplate = document.createElement("template");
+    logoTemplate.innerHTML = newLogoSvg.trim();
 
     function replaceLogo() {
-        const pathElement = document.querySelector('path[d^="m19.6 66.5"]');
-        if (!pathElement) return;
+        const templateSvg = logoTemplate.content.firstElementChild;
+        const templatePath = templateSvg?.querySelector("path");
+        if (!templateSvg || !templatePath) return;
 
-        const originalSvg = pathElement.closest("svg");
-        if (!originalSvg || originalSvg.dataset.replaced === "true") return;
+        document
+            .querySelectorAll('path[d^="m19.6 66.5"]')
+            .forEach((originalPath) => {
+                const originalSvg = originalPath.closest("svg");
+                if (!originalSvg) return;
 
-        const template = document.createElement("template");
-        template.innerHTML = newLogoSvg.trim();
-        const newSvgElement = template.content.firstChild;
-
-        if (newSvgElement) {
-            newSvgElement.setAttribute(
-                "class",
-                originalSvg.getAttribute("class") || "",
-            );
-            newSvgElement.dataset.replaced = "true";
-            originalSvg.parentNode.replaceChild(newSvgElement, originalSvg);
-        }
+                originalSvg.setAttribute(
+                    "viewBox",
+                    templateSvg.getAttribute("viewBox"),
+                );
+                [...templatePath.attributes].forEach(({ name, value }) => {
+                    originalPath.setAttribute(name, value);
+                });
+                originalSvg.dataset.replaced = "true";
+            });
     }
 
     function replaceFavicon() {
@@ -84,7 +87,7 @@
 
     observer.observe(document.documentElement, {
         attributes: true,
-        attributeFilter: ["href", "rel"],
+        attributeFilter: ["href", "rel", "d", "viewBox"],
         childList: true,
         subtree: true,
     });
