@@ -4,6 +4,10 @@ English | [日本語](https://github.com/hakhatz2486/claude-logo-replacer/blob/m
 
 A userscript that replaces the default Claude.ai logo and favicon with [Clawd](https://lobehub.com/ja/icons/claudecode), the character of Claude Code.
 
+![replace preview in chat](https://raw.githubusercontent.com/hakhatz2486/claude-logo-replacer/main/assets/replace-preview-chat.png)
+
+![replace favicon preview](https://raw.githubusercontent.com/hakhatz2486/claude-logo-replacer/main/assets/replace-favicon-preview.png)
+
 ## Features
 
 - Replaces Claude.ai's default logo with Clawd
