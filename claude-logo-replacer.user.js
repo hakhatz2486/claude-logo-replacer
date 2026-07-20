@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name           Claude Logo Replacer
-// @name:ja        Claude Logo Replacer
+// @name           Claude Logo Replacer: Clawd
+// @name:ja        Claude Logo Replacer: Clawd
 // @namespace      https://github.com/hakhatz2486/claude-logo-replacer
-// @version        1.0.1
+// @version        1.0.2
 // @description    Replace the default Claude.ai logo and favicon with Clawd, the character of Claude Code.
 // @description:ja Claude.aiのデフォルトのロゴとファビコンを、Claude CodeのキャラクターであるClawdに置き換えます。
 // @author         hakhatz2486

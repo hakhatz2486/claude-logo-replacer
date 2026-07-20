@@ -1,4 +1,4 @@
-# Claude Logo Replacer
+# Claude Logo Replacer: Clawd
 
 [English](https://github.com/hakhatz2486/claude-logo-replacer/blob/main/README.md) | 日本語
 

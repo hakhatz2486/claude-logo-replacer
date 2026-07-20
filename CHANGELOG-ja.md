@@ -5,6 +5,12 @@
 形式は [Keep a Changelog](https://keepachangelog.com/ja/1.1.0/) を参考にし、
 バージョン番号は [Semantic Versioning](https://semver.org/lang/ja/) に準拠します。
 
+## 1.0.2 - 2026-07-20
+
+### Changed
+
+- ユーザースクリプト名を`Claude Logo Replacer: Clawd`に変更
+
 ## 1.0.1 - 2026-07-20
 
 ### Fixed
