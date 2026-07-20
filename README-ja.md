@@ -4,7 +4,7 @@
 
 Claude.aiのデフォルトのロゴとファビコンを、Claude Codeのキャラクターである[Clawd](https://lobehub.com/ja/icons/claudecode)に置き換えるユーザースクリプトです。
 
-![チャットでの置き換え例](https://raw.githubusercontent.com/hakhatz2486/claude-logo-replacer/main/assets/replace-preview-chat.png)
+![チャットでの置き換え例](https://raw.githubusercontent.com/hakhatz2486/claude-logo-replacer/main/assets/replace-preview-in-chat.png)
 
 ![ファビコンの置き換え例](https://raw.githubusercontent.com/hakhatz2486/claude-logo-replacer/main/assets/replace-favicon-preview.png)
 
